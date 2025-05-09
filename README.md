@@ -44,7 +44,7 @@ A simple e-commerce mobile application built using Flutter and the [Fake Store A
 
 ### Prerequisites
 - Flutter SDK
-- Android Studio or VS Code
+- Android Studio
 
 ### Installation
 1. Clone or download the repository.
