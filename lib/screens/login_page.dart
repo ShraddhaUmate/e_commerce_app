@@ -1,5 +1,6 @@
-import 'package:e_commerce_app/screens/category_screen.dart';
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
+
+import 'dashboard_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -22,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
         setState(() => _isLoading = false);
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (_) => CategoryScreen()),
+          MaterialPageRoute(builder: (_) => DashboardScreen()),
         );
       });
     }
@@ -138,3 +139,56 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+
+//
+// import 'package:flutter/material.dart';
+//
+// class LoginScreen extends StatefulWidget {
+//   @override
+//   _LoginScreenState createState() => _LoginScreenState();
+// }
+//
+// class _LoginScreenState extends State<LoginScreen> {
+//   final _formKey = GlobalKey<FormState>();
+//   final _emailController = TextEditingController();
+//   final _passwordController = TextEditingController();
+//
+//   void _login() {
+//     if (_formKey.currentState!.validate()) {
+//       Navigator.pushReplacementNamed(context, '/dashboard');
+//     }
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(title: Text("Login")),
+//       body: Padding(
+//         padding: const EdgeInsets.all(16.0),
+//         child: Form(
+//           key: _formKey,
+//           child: Column(
+//             children: [
+//               TextFormField(
+//                 controller: _emailController,
+//                 decoration: InputDecoration(labelText: "Email"),
+//                 validator: (value) =>
+//                 value != null && value.contains('@') ? null : "Enter valid email",
+//               ),
+//               TextFormField(
+//                 controller: _passwordController,
+//                 decoration: InputDecoration(labelText: "Password"),
+//                 obscureText: true,
+//                 validator: (value) =>
+//                 value != null && value.length >= 6 ? null : "Password too short",
+//               ),
+//               SizedBox(height: 20),
+//               ElevatedButton(onPressed: _login, child: Text("Login")),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+//
